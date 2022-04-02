@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7556530570881430"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: linear-gradient(to bottom, orange, black);
+}
+
+.name{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: blueviolet;
+}
+
+.serch{
+    width: 80%;
+    height: 5vh;
+    background-color: purple;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.star img{
+    margin-top: 30px;
+    width: 80%;
+    height: 50vh;
+}
+
+.move{
+    width: 60%;
+    height: 40vh;
+    background-image: linear-gradient(to top, purple, black);
+    margin-top: 40px;
+    border-radius: 100px;
+    padding: 20px;
+}
+
+.move button{
+    margin-top: 50px;
+    width: 40%;
+    height: 10vh;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 20px;
+}
+
+.msg{
+    width: 70%;
+    height: 19vh;
+    background-color: purple;
+    margin-top: 150px;
+    padding: 40px;
+    border-radius: 50px;
+}
+
+.msg input{
+    height: 10vh;
+    border: none;
+    background-color: gold;
+    border-radius: 20px;
+}
+
+.msg button{
+    width: 30%;
+    height: 5vh;
+    background-color: gold;
+    border: none;
+    border-radius: 20px;
+}
+
+.short{
+    width: 60%;
+    height: 40vh;
+    background-image: linear-gradient(to top, red, black);
+    margin-top: 40px;
+    border-radius: 100px;
+    padding: 20px;
+}
+
+.short button{
+    margin-top: 50px;
+    width: 40%;
+    height: 10vh;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+}
+
+.link{
+    width: 60%;
+    height: 40vh;
+    background-image: linear-gradient(to top, blue, black);
+    margin-top: 40px;
+    border-radius: 100px;
+    padding: 20px;
+    color: darkblue;
+}
+
+.link button{
+    margin-top: 50px;
+    width: 40%;
+    height: 10vh;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+}
+
+.group{
+    width: 60%;
+    height: 40vh;
+    background-image: linear-gradient(to top, green, black);
+    margin-top: 40px;
+    border-radius: 100px;
+    padding: 20px;
+    color: darkgreen;
+}
+
+
+.group button{
+    margin-top: 50px;
+    width: 40%;
+    height: 10vh;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+}
+
+.maker{
+    margin-top: 60px;
+    color: bisque;
+}
+</style>
+<body>
+    <center>
+        <p align="center">
+            <marquee bgcolor="blueviolet" width="470"> اهلا بك في موقعنا اربح معانا ايفون 13 مجانا </marquee></p>
+
+        <div class="name">
+            <h1>Xnoon</h1>
+        </div>
+        <div class="serch">
+            <script language="JavaScript">
+                // START HIDE
+                var MAX_ENGINES = 35;
+                var tp='';
+                var tpp='';
+                var find = 'hunt';
+                var hold=0;
+                var hold2=0;
+                var gog=0;
+                var ap='';
+                function MakeArray(n) {
+                for (var i = 1; i <= n; i++) {
+                this[i] = 0;
+                }
+                this.maxlen = n;
+                this.len = 0;
+                return this;
+                }
+                var engs = new MakeArray(MAX_ENGINES);
+                function find_substring(needle, haystack) {
+                var i, needlen = needle.length, haylen = haystack.length;
+                for (i=0; i<=haylen-needlen; i++) {
+                if (needle == haystack.substring(i,i+needlen))
+                return i;
+                }
+                return false;
+                }
+                function Engine(name, opts, home, search) {
+                var gotcha = find_substring(find, search);
+                this.name = name;
+                this.opts = opts;
+                this.home = home;
+                this.pre_gotcha = search.substring(0,gotcha);
+                this.post_gotcha= search.substring(gotcha+find.length, search.length);
+                }
+                function Add(name, opts, home, search) {
+                engs.len++;
+                if (engs.len <= engs.maxlen) {
+                engs[engs.len] = new Engine(name, opts, home, search)
+                }
+                else {
+                alert ('Better increase MAX_ENGINES: ' + engs.Len + '>' + engs.maxlen)
+                }
+                }
+                function DisplayForm() {
+                document.writeln('<FORM Name=Gotchaform OnSubmit="HandleForm(this); return false">');
+                document.writeln('<strong></strong>&nbsp;<INPUT size=15 name="query">');
+                document.writeln('<strong></strong>&nbsp;<SELECT name="service">');
+                for (i=1; i <= engs.len; i++) {
+                document.writeln("<OPTION " + engs[i].opts + "> " + engs[i].name);
+                }
+                document.writeln('</SELECT> &nbsp;<input type=submit value="ابحث"><br>');
+                document.writeln('</FORM>');
+                document.Gotchaform.query.focus()
+                }
+                function HandleForm(form){
+                var i, newq="", oldq=form.query.value;
+                for (i=0; i<oldq.length; i++) { // compress [ ]+ into \+
+                var thischar = oldq.charAt(i);
+                if (thischar =="+")newq += "%2B";
+                else
+                if (thischar != ' ')
+                
+                newq += thischar;
+                else if (lastchar != ' ')
+                newq += '+';
+                lastchar = thischar;
+                }
+                var eng = engs[1+form.service.selectedIndex];
+                // Window
+                search=window.open(newq ? eng.pre_gotcha + newq + eng.post_gotcha : eng.home,"SmartSearch","scrollbars=yes,toolbar=yes ,location=yes,directorie s=yes,status=yes,menubar=yes,resizable=yes,width=' 100%',hight='100%'");
+                }
+                Add("Alta Vista","SELECTED","http://altavista.digital.com/","http://altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=d&q=hunt");
+                Add("Yahoo!","","http://www.yahoo.com/","http://search.yahoo.com/bin/search?p=hunt" );
+                Add("DejaNews","","http://www.dejanews.com/","http://search.dejanews.com/nph-dnquery.xp?query=hunt&defaultOp=AND&svcclass=dncur rent&maxhits=25");
+                Add("HotBot","","http://www.search.hotbot.com","http://www.search.hotbot.com/search.html?MT=hunt&DC=25");
+                Add("Infoseek","","http://www.infoseek.com/Home?pg=Home.html&sv=A2","http://www.infoseek.com/Titles?qt=hunt&col=WW&sv=A2");
+                Add("Excite","","http://www.excite.com/","http://www.excite.com/search.gw?searchType=Concept&search=hunt&category= default");
+                Add("Lycos","","http://www.lycos.com/","http://www.lycos.com/cgi-bin/pursuit?query=hunt&backlink=639");
+                Add("Magellan","","http://www.mckinley.com/","http://www.mckinley.com/extsearch.cgi?query=hunt");
+                Add("OpenText","","http://search.opentext.com","http://search.opentext.com/omw/simplesearch?SearchFor=hunt&mode=and");
+                Add("WebCrawler","","http://webcrawler.com/","http://webcrawler.com/cgi-bin/WebQuery?searchText=hunt&maxHits=25");
+                // Software
+                Add("ZDNet Files","","http://www.zdnet.com/","http://www6.zdnet.com/cgi-bin/texis/swlib/hotfiles/search.html?Usrt=rel&Usrchtype=simple&Utext=hunt") ;
+                Add("Filez","","http://www.filez.com/","http://filez.com/cgi/filez.cgi?query=hunt&type=All+Files&hits=50&domain =World&doit=Search/");
+                Add("Shareware.com","","http://www.shareware.com/","http://search.shareware.com/code/engine/Find?logop=and&cfrom=quick&orfile=True&hits=25&sea rch=hunt&category=All-Categories");
+                Add("PC Gamer","","http://www.pcgame.com/","http://www.pcgame.com/finder/search.cgi?key=hunt");
+                // Denmark
+                DisplayForm();
+                // STOP HIDE
+                // --></script>
+        </div>
+
+        <div class="star">
+            <img src="img/mar.jpg">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Start of shorte.st banner code -->
+<a href="http://join-shortest.com/ref/387e935031?user-type=new"><img src="https://static.shorte.st/bundles/smeuser/img/referral_banners/es_300x250.png?2022-02-28.0" title="Gana dinero en los enlaces acortados" width="300" height="250" />#ref-menu</a>
+<!-- End of shorte.st banner code -->
+
+
+        <div class="move">
+            <h2>
+                <script language="JavaScript1.2">
+                
+                
+                
+                var message="WATCH NOW !"
+                var neonbasecolor="purple"
+                var neontextcolor="yellow"
+                var flashspeed=100  //in milliseconds
+                
+                ///No need to edit below this line/////
+                
+                var n=0
+                if (document.all||document.getElementById){
+                document.write('<font color="'+neonbasecolor+'">')
+                for (m=0;m<message.length;m++)
+                document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+                document.write('</font>')
+                }
+                else
+                document.write(message)
+                
+                function crossref(number){
+                var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+                return crossobj
+                }
+                
+                function neon(){
+                
+                //Change all letters to base color
+                if (n==0){
+                for (m=0;m<message.length;m++)
+                //eval("document.all.neonlight"+m).style.color=neonbasecolor
+                crossref(m).style.color=neonbasecolor
+                }
+                
+                //cycle through and change individual letters to neon color
+                crossref(n).style.color=neontextcolor
+                
+                if (n<message.length-1)
+                n++
+                else{
+                n=0
+                clearInterval(flashing)
+                setTimeout("beginneon()",1500)
+                return
+                }
+                }
+                
+                function beginneon(){
+                if (document.all||document.getElementById)
+                flashing=setInterval("neon()",flashspeed)
+                }
+                beginneon()
+                
+                
+                </script>
+                </h2>
+                </font></p>
+                <form action="https://www.youtube.com/watch?v=pcciNiD9U24">
+                <button>Movie</button>
+                </form>
+        </div>
+
+        <div class="short">
+
+            <h2>
+                <script language="JavaScript1.2">
+                
+                
+                
+                var message="WATCH NOW !"
+                var neonbasecolor="red"
+                var neontextcolor="yellow"
+                var flashspeed=100  //in milliseconds
+                
+                ///No need to edit below this line/////
+                
+                var n=0
+                if (document.all||document.getElementById){
+                document.write('<font color="'+neonbasecolor+'">')
+                for (m=0;m<message.length;m++)
+                document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+                document.write('</font>')
+                }
+                else
+                document.write(message)
+                
+                function crossref(number){
+                var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+                return crossobj
+                }
+                
+                function neon(){
+                
+                //Change all letters to base color
+                if (n==0){
+                for (m=0;m<message.length;m++)
+                //eval("document.all.neonlight"+m).style.color=neonbasecolor
+                crossref(m).style.color=neonbasecolor
+                }
+                
+                //cycle through and change individual letters to neon color
+                crossref(n).style.color=neontextcolor
+                
+                if (n<message.length-1)
+                n++
+                else{
+                n=0
+                clearInterval(flashing)
+                setTimeout("beginneon()",1500)
+                return
+                }
+                }
+                
+                function beginneon(){
+                if (document.all||document.getElementById)
+                flashing=setInterval("neon()",flashspeed)
+                }
+                beginneon()
+                
+                
+                </script>
+                </h2>
+                </font></p>
+
+                <form action="short.html">
+                    <button>short</button>
+                </form>
+        </div>
+
+        <div class="link">
+
+            <h1>GO NOW !!</h1>
+                <form action="https://www.wallpaperflare.com/">
+                    <button>GO</button>
+                </form>
+        </div>
+
+        <div class="group">
+            <h1>GROUP</h1>
+                <form action="https://www.hackerone.com/">
+                    <button>GO</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Start of shorte.st banner code -->
+<a href="http://join-shortest.com/ref/387e935031?user-type=new"><img src="//static.shorte.st/bundles/smeuser/img/referral_banners/300x250.png?2022-02-28.0" title="Earn money on short links" width="300" height="250" />#ref-menu</a>
+<!-- End of shorte.st banner code -->
+        <div class="maker">
+            <p>By Jamaica the king</p>
+        </div>
+
+        <div class="msg">
+            <form action="https://formspree.io/f/mbjwappv">
+                <input type="text" placeholder="   Enter your message"><br><br>
+                <button>send</button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
